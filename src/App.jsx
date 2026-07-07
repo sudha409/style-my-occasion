@@ -5,8 +5,11 @@ import AboutUs from './Components/AboutUs';
 import Feedback from './Components/FeedBack';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-
-
+import Birthday from './Components/Birthday';
+import Wedding from './Components/Wedding';
+import OfficeMeetings from './Components/Officemeetings';
+import Party from './Components/Party';
+import OccassionStyle from './Components/OccassionStyle';
 function App() {
   return (
 
@@ -18,6 +21,11 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/aboutUs" element={<AboutUs/>} />
             <Route path="/feedback" element={<Feedback />} />
+           <Route path="/birthday" element={<Birthday />} />
+           <Route path="/wedding" element={<Wedding/>}/>
+           <Route path="/OfficeMeetings" element={<OfficeMeetings/>}/>
+           <Route path="/Party" element={<Party/>}/>
+           <Route path="/OccassionStyle" element={<OccassionStyle/>}/>
       </Routes>
           </div>
   <Footer/>

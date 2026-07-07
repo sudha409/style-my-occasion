@@ -7,7 +7,7 @@ function feedback() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (ev) => {
-    e.preventDefault();
+    ev.preventDefault();
     setSubmitted(true);
 
 
@@ -29,7 +29,7 @@ function feedback() {
             <input
               type="text"
               value={name}
-              onChange={(ev) => setName(e.target.value)}
+              onChange={(ev) => setName(ev.target.value)}
               required
             /></div>
           <div className="form-row">
@@ -37,14 +37,14 @@ function feedback() {
             <input
               type="email"
               value={email}
-              onChange={(ev) => setEmail(e.target.value)}
+              onChange={(ev) => setEmail(ev.target.value)}
               required
             /></div>
           <div className="form-row">
             <label>Message:</label>
             <textarea
               value={message}
-              onChange={(ev) => setMessage(e.target.value)}
+              onChange={(ev) => setMessage(ev.target.value)}
               required
             />
           </div>

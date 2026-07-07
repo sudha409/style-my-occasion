@@ -59,3 +59,38 @@ nav a {
   padding: 2px;
 
 }
+
+
+.homeContent {
+  width: 80%;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+
+
+}
+
+.homeImg {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin-inline: 20px;
+}
+
+.occasion-box {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.occasion-img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.occasion-label {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 500;
+}
