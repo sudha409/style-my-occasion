@@ -1,15 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React from 'react';
+import { Routes, Route, Link } from 'react-router';
+import HomePage from './Components/HomePage';
+import AboutUs from './Components/AboutUs';
+import Feedback from './Components/FeedBack';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-   <div><h1>Style My Occasion</h1></div>
-  )
-}
 
-export default App
+    <div>
+     <Header/>  
+    
+    <div className="content">
+      <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/aboutUs" element={<AboutUs/>} />
+            <Route path="/feedback" element={<Feedback />} />
+      </Routes>
+          </div>
+  <Footer/>
+
+      </div>
+    
+);
+}
+export default App;
