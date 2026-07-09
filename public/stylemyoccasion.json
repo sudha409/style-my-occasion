@@ -1,0 +1,26 @@
+{
+    "header": "StyleMyOccasion",
+    "categories": [
+        {
+            "name": "BirthDays",
+            "img": "/images/homepage/birthdays.png",
+            "link": "/birthday"
+         
+        },
+        {
+            "name": "Weddings",
+            "img": "/images/homepage/weddings.png",
+            "link": "/wedding"
+        },
+        {
+            "name": "OfficeMeetings",
+            "img": "/images/homepage/OfficeMeetings.png",
+            "link": "/OfficeMeetings"
+        },
+        {
+            "name": "Partys",
+            "img": "/images/homepage/partys.png",
+            "link": "/Party"
+        }
+    ]
+}

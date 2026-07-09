@@ -1,37 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router';
-import BirthDayimage  from '../assets/sudha.jpg'
-import Birthday from './Birthday';
-import Wedding from './Wedding';
-import OfficeMeetings from './Officemeetings';
-import Party from './Party';
-function homePage(){
-    return(
-        <div  className="homeContent">
-        <h1>StyleMyOccasion</h1>
 
-<Link to="/birthday" className="occasion-box">
-  <img src={BirthDayimage } alt="Birthday" className="occasion-img" />
-  <p className="occasion-label">Birthday</p>
-</Link>
+import { useState, useEffect } from "react";
 
-<Link to="/wedding" className="occasion-box">
-  <img src={BirthDayimage} alt="Wedding" className="occasion-img" />
-  <p className="occasion-label">Wedding</p>
-</Link>
+function homePage() {
 
-<Link to="/OfficeMeetings" className="occasion-box">
-  <img src={BirthDayimage } alt="OfficeMeetings" className="occasion-img" />
-  <p className="occasion-label">OfficeMeetings</p>
-</Link>
+    const [homepage, setHomePage] = useState(null);
+
+    useEffect(() => {
+        fetch("/stylemyoccasion.json")
+            .then((response) => response.json())
+            .then((data) => setHomePage(data));
+    }, []);
 
 
-<Link to="/Party" className="occasion-box">
-  <img src={BirthDayimage } alt="Party" className="occasion-img" />
-  <p className="occasion-label">Partys</p>
-</Link>
-        
+
+    return (
+        <div>
+
+            {homepage ?
+
+                (
+                    <div className="homeContent">
+                        <h1>{homepage.header}</h1>
+                        {
+                            homepage.categories.map(category => (
+                                 
+                                <Link to={category.link} className="occasion-box" >
+                                    <img src={category.img} alt={category.name} className="occasion-img" />
+                                    <p className="overlay">{category.name}</p>
+                                </Link>
+                             
+                            ))
+
+                        }
+                    </div>
+
+
+                )
+                : (
+                    <p>Loading...</p>
+                )}
         </div>
-    )
+    );
 }
 export default homePage;

@@ -1,0 +1,49 @@
+{
+    "header": "Birthdays Collection",
+    "designs": 
+[
+    {
+        "name": "BirthDays1",
+        "img": "/images/birthday/birthday1.png",
+        "link": "/OccassionStyle",
+        "description" : "Perfect for birthdays and also Elevate your summer style with our Trendy Overfit Men's Shirt Set with Pant! This unique 2-piece summer suit for men combines comfort and fashion effortlessly. Perfect for casual outings or beach days, the relaxed fit ensures a breezy feel"
+    },
+    {
+        "name": "BirthDays2",
+        "img": "/images/birthday/birthday2.png",
+        "link": "/OccassionStyle",
+         "description" : "Perfect for birthdays and also Elevate your summer style with our Trendy Overfit Men's Shirt Set with Pant! This unique 2-piece summer suit for men combines comfort and fashion effortlessly. Perfect for casual outings or beach days, the relaxed fit ensures a breezy feel"
+    },
+    {
+        "name": "BirthDays3",
+        "img": "/images/birthday/birthday3.png",
+        "link": "/OccassionStyle",
+         "description" : " A woman stands in a softly lit birthday venue wearing a red floor‑length Indo‑Western gown. The gown features delicate zari embroidery along the bodice and hem, sheer full sleeves, and a draped dupatta‑style sash cascading from one shoulder. She pairs it with gold heels and statement jhumka earrings. "
+    },
+    {
+        "name": "BirthDays4",
+        "img": "/images/birthday/birthday4.png",
+        "link": "/OccassionStyle",
+         "description" : " A woman stands in a softly lit birthday venue wearing a red floor‑length Indo‑Western gown. The gown features delicate zari embroidery along the bodice and hem, sheer full sleeves, and a draped dupatta‑style sash cascading from one shoulder. She pairs it with gold heels and statement jhumka earrings. "
+    },
+    {
+        "name": "BirthDays5",
+        "img": "/images/birthday/birthday5.png",
+        "link": "/OccassionStyle",
+         "description" : " Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."
+    },
+    {
+        "name": "BirthDays6",
+        "img": "/images/birthday/birthday6.png",
+        "link": "/OccassionStyle",
+         "description" : " Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."
+    },
+    {
+        "name": "BirthDays7",
+        "img": "/images/birthday/birthday7.png",
+        "link": "/OccassionStyle",
+         "description" : " Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."
+    }
+]
+
+}

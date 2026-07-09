@@ -1,0 +1,49 @@
+{
+    "header": "Wedding Collection",
+    "designs": 
+[
+    {
+        "name": "wedding1",
+        "img": "/images/wedding/wedding1.png",
+        "link": "/OccassionStyle",
+        "description" : "Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."       
+    },
+    {
+        "name": "wedding2",
+        "img": "/images/wedding/wedding2.png",
+        "link": "/OccassionStyle",
+         "description" : "Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."
+},
+{
+        "name": "wedding3",
+        "img": "/images/wedding/wedding3.png",
+        "link": "/OccassionStyle",
+         "description" : " Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."
+    },
+    {
+        "name": "wedding4",
+        "img": "/images/wedding/wedding4.png",
+        "link": "/OccassionStyle",
+         "description" : " Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."
+    },
+    {
+        "name": "wedding5",
+        "img": "/images/wedding/wedding5.png",
+        "link": "/OccassionStyle",
+         "description" : " Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."
+    },
+    {
+        "name": "wedding6",
+        "img": "/images/wedding/wedding6.png",
+        "link": "/OccassionStyle",
+         "description" : " Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."
+    },
+    {
+    "name": "wedding7",
+        "img": "/images/wedding/wedding7.png",
+        "link": "/OccassionStyle",
+         "description" : " Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."
+    }
+]
+
+}

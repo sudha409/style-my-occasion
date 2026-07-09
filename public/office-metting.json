@@ -1,0 +1,50 @@
+{
+    "header": "OfficeMettings Collection",
+    "designs": 
+[
+    {
+        "name": "OfficeMettings1",
+        "img": "/images/officemeeting/OfficeMettings1.png",
+        "link": "/OccassionStyle",
+        "description" : "Chic and minimal: long‑sleeve white blouse tucked into high‑waisted navy wide‑leg trousers. Great for conference rooms"
+    },
+    {
+        "name": "OfficeMettings2",
+        "img": "/images/officemeeting/officemeeting2.png",
+        "link": "/OccassionStyle",
+         "description" : "A polished business‑casual look with a navy blouse (rolled sleeves), beige tailored pants, nude heels, and a tan handbag. Great for team meetings."
+    },
+    {
+        "name": "OfficeMettings3",
+        "img": "/images/officemeeting/officemeeting3.png",
+        "link": "/OccassionStyle",
+         "description" : "Classic business‑formal: structured grey blazer, matching skirt, black blouse, and black heels. Perfect for executive or client meetings"
+    },
+
+     {
+        "name": "OfficeMettings4",
+        "img": "/images/officemeeting/officemeeting4.png",
+        "link": "/OccassionStyle",
+         "description" : "A modern power look: black blazer, black trousers, crisp white blouse, and a black handbag with gold accents."
+    },
+    {
+        "name": "officemettings5",
+        "img": "/images/officemeeting/officemeeting5.png",
+        "link": "/OccassionStyle",
+         "description" : "A modern power look: black blazer, black trousers, crisp white blouse, and a black handbag with gold accents."
+    },
+    {
+        "name": "OfficeMettings6",
+        "img": "/images/officemeeting/Officemeeting6.png",
+        "link": "/OccassionStyle",
+         "description" : "Step into effortless elegance with this light blue tweed skirt suit set, designed for a polished and feminine look. Featuring a tailored jacket with delicate pearl button details"
+    },
+    {
+        "name": "Officemettings7",
+        "img": "/images/officemeeting/Officemeeting7.png",
+        "link": "/OccassionStyle",
+         "description" : "Step into effortless elegance with this light blue tweed skirt suit set, designed for a polished and feminine look. Featuring a tailored jacket with delicate pearl button details"
+    }
+]
+
+}

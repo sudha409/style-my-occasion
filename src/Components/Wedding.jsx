@@ -1,9 +1,45 @@
+
+import OccassionStyle from "./OccassionStyle";
+
+import { Link } from 'react-router';
+
+import { useState, useEffect } from "react";
+
+
 function weddingPage(){
-    return (
-        <div>
-        <h1>Wedding Outfit Ideas</h1>
-            <p>Choose your perfect Wedding look!</p>
-            </div>
-    )
-}
+    const [weddingPage, setwedding] = useState(null);
+    useEffect(() => {
+            fetch("/wedding.json")
+                .then((response) => response.json())
+                .then((data) => setwedding(data));
+        }, []);
+        return(
+    <div>
+        
+                    { weddingPage ?
+        
+                        (
+                            <div className="weddingContent">
+                                <h1>{weddingPage.header}</h1>
+                                {
+                                    weddingPage.designs.map((design) => (
+                                         
+                                        <Link to={design.link} className="occasion-box" state={{ item : design  }}  key={design.name} >
+                                        <img src={design.img } alt={design.name} className="occasion-img" />
+                                         <p className="wedding-label">{design.name}</p>
+                                        </Link>
+                                     
+                                    ))
+        
+                                }
+                            </div>
+        
+        
+                        )
+                        : (
+                            <p>Loading...</p>
+                        )}
+                </div>
+        );
+        }
 export default weddingPage;
