@@ -1,0 +1,49 @@
+{
+    "header": "Partys Collection",
+    "designs": 
+[
+    {
+        "name": "partys1",
+        "img": "/images/party/party1.png",
+        "link": "/OccassionStyle",
+        "description" : "The dress has thin spaghetti straps, a gentle cowl neckline, and a mid‑calf length with a subtle side slit. She pairs it with strappy nude heels and a minimalist silver necklace"
+    },
+    {
+        "name": "partys2",
+        "img": "/images/party/party2.png",
+        "link": "/OccassionStyle",
+         "description" : "A man stands in a modern indoor party setting wearing a black slim‑fit shirt tucked neatly into grey tailored trousers. The shirt has a subtle sheen, long sleeves rolled just above the wrists, and a structured collar. He pairs it with black loafers and a sleek silver watch. "
+    },
+    {
+        "name": "partys3",
+        "img": "/images/party/party3.png",
+        "link": "/OccassionStyle",
+         "description" : " Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."
+    },
+    {
+        "name": "partys4",
+        "img": "/images/party/party4.png",
+        "link": "/OccassionStyle",
+         "description" : " Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."
+    },
+    {
+        "name": "partys5",
+        "img": "/images/party/party5.png",
+        "link": "/OccassionStyle",
+         "description" : " Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."
+    },
+    {
+        "name": "partys6",
+        "img": "/images/party/party6.png",
+        "link": "/OccassionStyle",
+         "description" : " Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."
+    },
+    {
+        "name": "partys7",
+        "img": "/images/party/party7.png",
+        "link": "/OccassionStyle",
+         "description" : " Celebrate your special day with a stylish and unique outfit.Choose colors, accessories, and styles that match your personality."
+    }
+]
+
+}

@@ -1,15 +1,21 @@
 import BirthDayimage from '../assets/sudha.jpg'
 import '../occasionstyle.css';
-import { Link } from 'react-router';
+import { Link,useLocation } from 'react-router';
+
 
 function occassionStyle() {
+
+  const location = useLocation();
+  const { item } = location.state;
+
+    
     return (
 
         <div>
             <div className="occasion-container">
 
                 <div className="imageStyle">
-                    <img src={BirthDayimage} alt="Birthday" className="occasion-img" />
+                    <img src={item.img} alt="Birthday" className="occasion-img" />
 
                 </div>
 
@@ -17,13 +23,12 @@ function occassionStyle() {
                 <div className="description">
                     <h1>Style Description</h1>
                     <p>
-                        Celebrate your special day with a stylish and unique outfit.
-                        Choose colors, accessories, and styles that match your personality.
+                        {item.description}
                     </p>
 
                     <div className="descriptionStyle-buttons">
                         <button className="btn-addtocart">Add To Cart</button>
-                        <Link to="/feedback"><button className="btn-feedback" >Feedback</button></Link> 
+                        <Link to="/feedback"  state={{ itemStyle : item  }}  key={ item.name } ><button className="btn-feedback"   >Feedback</button></Link> 
                       
                     </div>
                 </div>
