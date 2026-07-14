@@ -20,12 +20,13 @@ function OfficeMeetings(){
                         (
                             <div className="OfficeMeetingsContent">
                                 <h1>{OfficeMeetings.header}</h1>
+                                <h2>{OfficeMeetings.About}</h2>
                                 {
                                     OfficeMeetings.designs.map((design) => (
                                          
                                         <Link to={design.link} className="occasion-box" state={{ item : design  }}  key={design.name} >
-                                        <img src={design.img } alt={design.name} className="occasion-img" />
-                                         <p className="OfficeMeetings-label">{design.name}</p>
+                                        <img src={design.img } alt={design.name} className="occasion-img" title={design.title}/>
+                                         
                                         </Link>
                                      
                                     ))

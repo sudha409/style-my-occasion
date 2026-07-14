@@ -21,12 +21,13 @@ function weddingPage(){
                         (
                             <div className="weddingContent">
                                 <h1>{weddingPage.header}</h1>
+                                <h2>{weddingPage.About}</h2>
                                 {
                                     weddingPage.designs.map((design) => (
                                          
                                         <Link to={design.link} className="occasion-box" state={{ item : design  }}  key={design.name} >
-                                        <img src={design.img } alt={design.name} className="occasion-img" />
-                                         <p className="wedding-label">{design.name}</p>
+                                        <img src={design.img } alt={design.name} className="occasion-img"title={design.title} />
+                                         
                                         </Link>
                                      
                                     ))
