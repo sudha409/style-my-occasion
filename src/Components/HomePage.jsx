@@ -23,17 +23,21 @@ function homePage() {
                 (
                     <div className="homeContent">
                         <h1>{homepage.header}</h1>
+                        <h2>{homepage.About}</h2>
+                        
+                         <div className="four-grid">
                         {
                             homepage.categories.map(category => (
                                  
                                 <Link to={category.link} className="occasion-box" >
-                                    <img src={category.img} alt={category.name} className="occasion-img" />
-                                    <p className="overlay">{category.name}</p>
+                                    <img src={category.img} alt={category.name} className="occasion-img" title={category.title} />
+                                 
                                 </Link>
                              
                             ))
 
                         }
+                         </div>
                     </div>
 
 

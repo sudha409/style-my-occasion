@@ -14,13 +14,15 @@ function feedback() {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
+const title = itemStyle?.title || "Genaral";
+
   const handleSubmit = (ev) => {
     ev.preventDefault();
     setSubmitted(true);
-
+    
     const existing = JSON.parse(localStorage.getItem("feedbackList")) || [];
 
-    const newEntry = { name, email, message };
+    const newEntry = { name, email, message,title };
     existing.push(newEntry);
 
     localStorage.setItem("feedbackList", JSON.stringify(existing));
@@ -49,6 +51,7 @@ function feedback() {
             <form onSubmit={handleSubmit}>
               <div className="form-row">
                 <label>Name:</label>
+
                 <input
                   type="text"
                   value={name}
@@ -83,10 +86,12 @@ function feedback() {
           </div>
           <div className="column">
             <h2>All Submitted Feedback</h2>
-            {allFeedback.map((item, index) => (
+            {allFeedback
+            .filter(item => item.title === title)
+            .map((item, index) => (
               <div key={index} style={{ marginTop: "10px" }}>
+               <p><strong>{item.name} :</strong> {item.message}</p>
 
-                <p><strong>{item.name} :</strong> {item.message}</p>
               </div>
             ))}
           </div>

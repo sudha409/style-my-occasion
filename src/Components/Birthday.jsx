@@ -21,12 +21,13 @@ function birthday(){
                         (
                             <div className="birthdayContent">
                                 <h1>{birthday.header}</h1>
+                                <h2>{birthday.About}</h2>
                                 {
                                     birthday.designs.map((design) => (
                                          
                                         <Link to={design.link}className="occasion-box" state={{ item : design  }}  key={design.name}  >
-                                        <img src={design.img } alt={design.name} className="occasion-img" />
-                                         <p className="birthday-label">{design.name}</p>
+                                        <img src={design.img } alt={design.name} className="occasion-img" title={design.title} />
+                                         
                                         </Link>
                                      
                                     ))
