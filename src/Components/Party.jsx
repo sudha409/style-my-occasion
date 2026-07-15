@@ -1,6 +1,7 @@
 import OccassionStyle from "./OccassionStyle";
 import { Link } from 'react-router';
 import { useState, useEffect } from "react";
+import '../party.css';
 
 
 
@@ -19,7 +20,7 @@ function party(){
         
                         (
                             <div className="party">
-                                <h1>{party.header}</h1>
+                                <h1 className="party-text">{party.header}</h1>
                                 <h2>{party.About}</h2>
                                 {
                                     party.designs.map((design) => (

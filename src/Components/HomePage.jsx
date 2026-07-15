@@ -22,7 +22,7 @@ function homePage() {
 
                 (
                     <div className="homeContent">
-                        <h1>{homepage.header}</h1>
+                        <h1 className="homepage-header">{homepage.header}</h1>
                         <h2>{homepage.About}</h2>
                         
                          <div className="four-grid">
