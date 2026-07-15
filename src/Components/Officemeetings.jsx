@@ -19,7 +19,7 @@ function OfficeMeetings(){
         
                         (
                             <div className="OfficeMeetingsContent">
-                                <h1>{OfficeMeetings.header}</h1>
+                                <h1 className="office-title">{OfficeMeetings.header}</h1>
                                 <h2>{OfficeMeetings.About}</h2>
                                 {
                                     OfficeMeetings.designs.map((design) => (

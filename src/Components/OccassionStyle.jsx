@@ -21,7 +21,7 @@ function occassionStyle() {
 
 
                 <div className="description">
-                    <h1>Style Description</h1>
+                    <h1 className="rainbow-text">Style Description</h1>
                     <p>
                         {item.description}
                     </p>

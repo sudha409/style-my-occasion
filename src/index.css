@@ -13,6 +13,21 @@ footer {
   gap: 20px;
 }
 
+
+/* iPad */
+@media (max-width: 1024px) {
+  .four-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .four-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .content {
   width: 95%;
   margin: 30px auto;
@@ -39,32 +54,6 @@ nav a {
 }
 
 
-.form-row {
-  margin-bottom: 12px;
-}
-
-.form-row label {
-  display: inline-block;
-  width: 100px;
-  /* keeps labels aligned */
-  font-weight: 500;
-}
-
-.form-row input {
-  padding: 6px;
-  width: 200px;
-}
-
-.form-row textarea {
-  padding: 6px;
-  width: 200px;
-}
-
-.form-row button {
-  width: auto;
-  padding: 2px;
-
-}
 
 
 .homeContent {
@@ -103,3 +92,38 @@ nav a {
   font-weight: 500;
 }
 
+
+.rainbow-text {
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  display: inline-block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+
+.office-title {
+  background: linear-gradient(90deg, #5f1a28, #2ad04e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+   display: inline-block;
+}
+
+.homepage-header{
+  background: rgb(255, 0, 21);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+   display: inline-block;
+}
+ 

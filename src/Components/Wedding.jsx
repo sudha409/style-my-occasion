@@ -20,7 +20,7 @@ function weddingPage(){
         
                         (
                             <div className="weddingContent">
-                                <h1>{weddingPage.header}</h1>
+                                <h1 className="rainbow-text" >{weddingPage.header}</h1>
                                 <h2>{weddingPage.About}</h2>
                                 {
                                     weddingPage.designs.map((design) => (
