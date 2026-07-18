@@ -10,10 +10,13 @@ import Wedding from './Components/Wedding';
 import OfficeMeetings from './Components/Officemeetings';
 import Party from './Components/Party';
 import OccassionStyle from './Components/OccassionStyle';
+
+
+
 function App() {
   return (
 
-    <div>
+    <div> 
      <Header/>  
     
     <div className="content">

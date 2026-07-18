@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+
 import { useState, useEffect } from "react";
 
 function homePage() {
@@ -23,17 +24,15 @@ function homePage() {
                 (
                     <div className="homeContent">
                         <h1 className="homepage-header">{homepage.header}</h1>
-                        <h2>{homepage.About}</h2>
+                        <h3>{homepage.About}</h3>
                         
                          <div className="four-grid">
                         {
                             homepage.categories.map(category => (
                                  
-                                <Link to={category.link} className="occasion-box" >
+                                <Link to={category.link} className="occasion-box" key={category.name} >
                                     <img src={category.img} alt={category.name} className="occasion-img" title={category.title} />
-                                 
                                 </Link>
-                             
                             ))
 
                         }
