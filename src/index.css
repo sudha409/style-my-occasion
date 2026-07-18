@@ -1,11 +1,28 @@
 header,
 footer {
-  background-color: #333;
+ background: linear-gradient(
+  
+    90deg,
+    rgb(221, 160, 160),
+    rgb(209, 181, 128),
+    rgb(167, 167, 80),
+    rgb(137, 197, 137),
+    rgb(148, 148, 214),
+    rgb(186, 148, 212),
+    rgb(224, 170, 224)
+  );
   color: white;
   text-align: center;
-  padding: 15px;
+    padding: 15px;
 }
 
+
+.headerLogo{
+   display: flex;
+    align-items : center;
+    justify-content: center;   
+    gap: 10px;           
+  }
 
 .four-grid {
   display: grid;
@@ -29,13 +46,13 @@ footer {
 }
 
 .content {
-  width: 95%;
+  width: 90%;
   margin: 30px auto;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
   border: 2px solid #333;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 55px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -120,10 +137,17 @@ nav a {
 }
 
 .homepage-header{
-  background: rgb(255, 0, 21);
+  background: linear-gradient(90deg, #b8061e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
   font-weight: bold;
-   display: inline-block;
+    font-size: 48px;
+  font-weight: 700;
 }
- 
+
+
+@keyframes sparkle {
+  from { text-shadow: 0 0 5px #9dbd2b, 0 0 10px #aee023; }
+  to { text-shadow: 0 0 15px #a4af0b, 0 0 25px #b8a921; }
+}
