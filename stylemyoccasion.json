@@ -5,26 +5,26 @@
     "categories": [
         {
             "name": "BirthDays",
-            "img": "/images/homepage/birthdays.png",
+            "img": "images/homepage/birthdays.png",
             "link": "/birthday",
              "title" : "Birthday Outfit" 
          
         },
         {
             "name": "Weddings",
-            "img": "/images/homepage/weddings.png",
+            "img": "images/homepage/weddings.png",
             "link": "/wedding",
              "title" : "Weddings Outfit" 
         },
         {
             "name": "OfficeMeetings",
-            "img": "/images/homepage/OfficeMeetings.png",
+            "img": "images/homepage/OfficeMeetings.png",
             "link": "/OfficeMeetings",
              "title" : "OfficeMeetings Outfit" 
         },
         {
             "name": "Partys",
-            "img": "/images/homepage/partys.png",
+            "img": "images/homepage/partys.png",
             "link": "/Party",
             "title" : "Partys Outfit" 
         }
