@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 
+
 function header(){
 
 return(
@@ -7,7 +8,7 @@ return(
     <header>
       
         <h1  className="headerLogo" > 
-            <img src="/images/logo.png" alt="SMO" className="occasion-img" title="StyleMyOccasion"  style={{ width: "55px", height: "55px", borderRadius: "50%" }} /> 
+            <img src="images/logo.png" alt="SMO" className="occasion-img" title="StyleMyOccasion"  style={{ width: "55px", height: "55px", borderRadius: "50%" }} /> 
             StyleMyOccasion
             </h1>
       
