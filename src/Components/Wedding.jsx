@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 function weddingPage(){
     const [weddingPage, setwedding] = useState(null);
     useEffect(() => {
-            fetch("/wedding.json")
+            fetch("wedding.json")
                 .then((response) => response.json())
                 .then((data) => setwedding(data));
         }, []);

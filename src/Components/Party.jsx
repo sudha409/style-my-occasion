@@ -8,7 +8,7 @@ import '../party.css';
 function party(){
      const [party, setparty] = useState(null);
     useEffect(() => {
-            fetch("/partys.json")
+            fetch("partys.json")
                 .then((response) => response.json())
                 .then((data) => setparty(data));
         }, []);

@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useLocation } from 'react-router';
 import React from 'react';
-import '../feedback.css';
 import  Thankyou from './ThankYou';
+import '../feedback.css';
+
 
 
 function feedback() {
@@ -47,7 +48,7 @@ const title = itemStyle?.title || "Genaral";
 
         <div className="column">  {itemStyle ? (
             <img src={itemStyle.img} alt={itemStyle.name} className="layout-image" />
-           ):  <img src="/images/feedback.jpg" alt="FeedBack" className="layout-image" /> }</div>
+           ):  <img src="images/feedback.jpg" alt="FeedBack" className="layout-image" /> }</div>
 
           <div className="column">
             <p>We would love to hear your thoughts!</p>

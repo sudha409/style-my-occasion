@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 function OfficeMeetings(){
  const [OfficeMeetings, setOfficeMeeting] = useState(null);
     useEffect(() => {
-            fetch("/office-metting.json")
+            fetch("office-meeting.json")
                 .then((response) => response.json())
                 .then((data) => setOfficeMeeting(data));
         }, []);

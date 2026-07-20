@@ -10,7 +10,7 @@ function birthday(){
     const [birthday, setBirthday] = useState(null);
     // Fetch birthday JSON data when component load
     useEffect(() => {
-            fetch("/birthdays.json")
+            fetch("birthdays.json")
                 .then((response) => response.json())// Convert response to JSON
                 .then((data) => setBirthday(data));// Save JSON data into state
         }, []);// Empty array → runs only once

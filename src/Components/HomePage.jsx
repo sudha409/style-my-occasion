@@ -9,7 +9,7 @@ function homePage() {
     const [homepage, setHomePage] = useState(null);
 
     useEffect(() => {
-        fetch("/stylemyoccasion.json")
+        fetch("stylemyoccasion.json")
             .then((response) => response.json())
             .then((data) => setHomePage(data));
     }, []);
