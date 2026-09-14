@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 import { useLocation } from 'react-router';
 import React from 'react';
 import  Thankyou from './ThankYou';
@@ -7,31 +7,66 @@ import '../feedback.css';
 
 
 function feedback() {
-
   const location = useLocation();
-  const itemStyle = location.state?.itemStyle;
+const itemStyle = location.state?.itemStyle;
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  // If outfit exists → use its title; otherwise use "Genaral"
-  // This helps filter feedback for specific outfit or general feedback
-const title = itemStyle?.title || "Genaral";
+  const title = itemStyle && itemStyle.title ? itemStyle.title : null;
+;
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    setSubmitted(true);
-    // Load existing feedback from localStorage
-    const existing = JSON.parse(localStorage.getItem("feedbackList")) || [];
+  
+const newEntry = {
+  comments: message,   
+  name : name,
+  email : email,
+  type :  title ? 'O' : 'G',
+  user: {
+    id: '1' 
+  }
+};
 
-    const newEntry = { name, email, message,title };
-    existing.push(newEntry);
-     // Save updated list back to localStorage
-    localStorage.setItem("feedbackList", JSON.stringify(existing));
+if (title) {
+  newEntry.outfits = { title: title };  
+} 
+
+
+fetch("http://localhost:8080/api/feedback", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(newEntry)
+})
+  .then(res => {
+    if (!res.ok) {
+      throw new Error("Failed to submit feedback");
+    }
+    return res.json();
+  })
+  .then(data => {
+    setSubmitted(true);
+  })
+  .catch(err => {
+    console.error(err);
+  });
+
+
   };
-  // Load all feedback from localStorage
-  const allFeedback = JSON.parse(localStorage.getItem("feedbackList")) || [];
+
+ const [allFeedback, setallFeedback] = useState(null);
+ const uri = title ? `http://localhost:8080/api/feedback/outfit/${title}` : `http://localhost:8080/api/feedback/type/G`; 
+    useEffect(() => {
+            fetch(uri)
+                .then((response) => response.json())
+                .then((data) => setallFeedback(data));
+        }, []);
+
 
   return (
     <div style={{ textAlign: "center", marginTop: "20px" }}>
@@ -92,14 +127,9 @@ const title = itemStyle?.title || "Genaral";
             <h2>All Submitted Feedback</h2>
             
              {/* Show only feedback matching the selected outfit OR general */}
-            {allFeedback
-            .filter(item => item.title === title)
-            .map((item, index) => (
-              <div key={index} style={{ marginTop: "10px" }}>
-               <p><strong>{item.name} :</strong> {item.message}</p>
-
-              </div>
-            ))}
+            {allFeedback ? allFeedback.map((feedback) => 
+              <p><strong>{feedback.name} :</strong> {feedback.comments}</p>) 
+            : ( <p></p> )  }
           </div>
         </div>
       )}

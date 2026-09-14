@@ -10,6 +10,8 @@ import Wedding from './Components/Wedding';
 import OfficeMeetings from './Components/Officemeetings';
 import Party from './Components/Party';
 import OccassionStyle from './Components/OccassionStyle';
+import Signup from './Components/SignUp';
+import Login from './Components/Login';
 
 
 
@@ -21,9 +23,12 @@ function App() {
     
     <div className="content">
       <Routes>
+            
             <Route path="/" element={<HomePage />} />
+             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/aboutUs" element={<AboutUs/>} />
-            <Route path="/feedback" element={<Feedback />} />
+            <Route path="/feedback"   element={<Feedback />} />
            <Route path="/birthday" element={<Birthday />} />
            <Route path="/wedding" element={<Wedding/>}/>
            <Route path="/OfficeMeetings" element={<OfficeMeetings/>}/>
