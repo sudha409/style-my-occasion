@@ -1,7 +1,23 @@
-import { Link } from 'react-router';
-
+import { Link ,useNavigate,useLocation} from 'react-router';
+import { useState, useEffect } from "react";
 
 function header(){
+
+const location = useLocation();
+const navigate = useNavigate();
+ const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    const name = localStorage.getItem("username");
+     setUsername(name);
+  }, [location.pathname]);
+
+
+ const handleLogout = () => {
+   setUsername("");
+   localStorage.removeItem("username");
+    navigate("/login");   // redirect to login page
+  };
 
 return(
 <div>
@@ -16,9 +32,27 @@ return(
          <Link to="/">Home</Link>
           <Link to="/aboutUs">About&nbsp;&nbsp;Us</Link>
           <Link to="/feedback">Feedback</Link>
-          
-        </nav>
+         
+            
+         </nav>
       
+  <div className="right-links">
+  {username ? (
+    <>
+      <span style={{ fontWeight: "bold" }}>Welcome, {username}</span>
+      <button onClick={handleLogout} className="logout-btn">Logout</button>
+    </>
+  ) : (
+    <>
+      <Link to="/login" state={{ from: location.pathname }}  >Login</Link>
+      <Link to="/signup">Signup</Link>
+    </>
+  )}
+</div>
+
+       
+      
+
         </header>
 </div>
  );

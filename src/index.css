@@ -63,6 +63,7 @@ body {
 }
 
 
+
 nav a {
   color: white;
   margin: 0 15px;
@@ -80,8 +81,6 @@ nav a {
 
 
 }
-
-
 
 .homeImg {
   display: inline-block;
@@ -150,4 +149,23 @@ nav a {
 @keyframes sparkle {
   from { text-shadow: 0 0 5px #9dbd2b, 0 0 10px #aee023; }
   to { text-shadow: 0 0 15px #a4af0b, 0 0 25px #b8a921; }
+}
+
+.right-links {
+    display: flex;
+    align-items : center;
+    justify-content: end;   
+    gap: 10px; 
+    color: white;
+    font-weight: bold;
+      margin: 0 15px;
+}
+
+.logout-btn {
+  display: flex;
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+   display: inline-block;
 }

@@ -14,13 +14,11 @@ import Signup from './Components/SignUp';
 import Login from './Components/Login';
 
 
-
 function App() {
   return (
 
     <div> 
      <Header/>  
-    
     <div className="content">
       <Routes>
             

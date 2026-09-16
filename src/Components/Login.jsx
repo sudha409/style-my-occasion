@@ -1,10 +1,16 @@
 import { useState } from "react";
+import { useNavigate,useLocation } from "react-router";
 
 function Login() {
+const location = useLocation();
+const from = location.state?.from || "/";
+
   const [form, setForm] = useState({
     email: "",
     password: ""
   });
+
+ const navigate = useNavigate();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -20,11 +26,14 @@ function Login() {
     })
       .then((res) => res.json())
       .then((data) => {
-        alert("Login successful");
-        console.log(data.JSON);
+      localStorage.setItem("username", data.name);
+       navigate(from,{ replace: true });
       })
       .catch((err) => console.error(err));
   };
+
+
+
 
   return (
     <div className="about-container">
