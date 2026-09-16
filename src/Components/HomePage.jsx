@@ -30,7 +30,7 @@ function homePage() {
                         {
                             homepage.map(category => (
                                  
-                                <Link to={category.link} className="occasion-box" key={category.name} >
+                                <Link to={category.link} className="occasion-box" key={category.name}   >
                                     <img src={category.img} alt={category.name} className="occasion-img" title={category.title} />
                                 </Link>
                             ))

@@ -1,6 +1,9 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router";
 function Signup() {
+
+   const navigate = useNavigate();
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -22,8 +25,7 @@ function Signup() {
     })
       .then((res) => res.json())
       .then((data) => {
-        alert("Signup successful");
-        console.log(data);
+        navigate("/login");
       })
       .catch((err) => console.error(err));
   };
@@ -53,9 +55,9 @@ function Signup() {
           value={form.email}
           onChange={handleChange}
           required
-        />
+        /></div>
 
-<div className="form-row"></div>
+<div className="form-row">
         <input
           type="password"
           name="password"
