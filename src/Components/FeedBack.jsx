@@ -8,6 +8,10 @@ import '../feedback.css';
 
 function feedback() {
   const location = useLocation();
+
+
+ const clickTrigger = location.state?.trigger;
+
 const itemStyle = location.state?.itemStyle;
 
   const [name, setName] = useState("");
@@ -17,6 +21,18 @@ const itemStyle = location.state?.itemStyle;
 
   const title = itemStyle && itemStyle.title ? itemStyle.title : null;
 ;
+
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    
+setName(user ? user.user.name :"");
+setEmail(user ?user.user.email:"");
+
+  }, []);
+
+
+
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
@@ -54,18 +70,20 @@ fetch("http://localhost:8080/api/feedback", {
   })
   .catch(err => {
     console.error(err);
-  });
+  }) ;
 
 
   };
 
  const [allFeedback, setallFeedback] = useState(null);
+
+
  const uri = title ? `http://localhost:8080/api/feedback/outfit/${title}` : `http://localhost:8080/api/feedback/type/G`; 
     useEffect(() => {
             fetch(uri)
                 .then((response) => response.json())
                 .then((data) => setallFeedback(data));
-        }, []);
+        }, [clickTrigger]);
 
 
   return (
@@ -95,6 +113,7 @@ fetch("http://localhost:8080/api/feedback", {
                   type="text"
                   value={name}
                   onChange={(ev) => setName(ev.target.value)}
+                   disabled={Boolean(name)}
                   required
                 />
               </div>
@@ -105,6 +124,7 @@ fetch("http://localhost:8080/api/feedback", {
                   type="email"
                   value={email}
                   onChange={(ev) => setEmail(ev.target.value)}
+                     disabled={Boolean(email)}
                   required
                 />
               </div>

@@ -26,15 +26,11 @@ const from = location.state?.from || "/";
     })
       .then((res) => res.json())
       .then((data) => {
-      localStorage.setItem("username", data.name);
+      localStorage.setItem("user", JSON.stringify(data));
        navigate(from,{ replace: true });
       })
       .catch((err) => console.error(err));
   };
-
-
-
-
   return (
     <div className="about-container">
             <h1 className="about-title">Welcome to StyleMyOccation</h1>
