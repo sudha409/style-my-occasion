@@ -7,17 +7,20 @@ const location = useLocation();
 const navigate = useNavigate();
  const [username, setUsername] = useState("");
 
+
   useEffect(() => {
-    const name = localStorage.getItem("username");
-     setUsername(name);
+    const user = JSON.parse(localStorage.getItem("user"));
+
+     setUsername(user ? user.user.name: "");
   }, [location.pathname]);
 
 
  const handleLogout = () => {
    setUsername("");
-   localStorage.removeItem("username");
-    navigate("/login");   // redirect to login page
+   localStorage.removeItem("user");
+    navigate("/");   // redirect to login page
   };
+
 
 return(
 <div>
@@ -31,7 +34,7 @@ return(
         <nav>
          <Link to="/">Home</Link>
           <Link to="/aboutUs">About&nbsp;&nbsp;Us</Link>
-          <Link to="/feedback">Feedback</Link>
+          <Link to="/feedback" state={{ trigger: Date.now() }} >Feedback</Link>
          
             
          </nav>
@@ -44,7 +47,7 @@ return(
     </>
   ) : (
     <>
-      <Link to="/login" state={{ from: location.pathname }}  >Login</Link>
+      <Link to="/login" state={{ from: location.pathname }}>Login</Link>
       <Link to="/signup">Signup</Link>
     </>
   )}
